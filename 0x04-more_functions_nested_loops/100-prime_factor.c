@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main()
+int main(void)
 {
    long int n;
    n=612852475143;
