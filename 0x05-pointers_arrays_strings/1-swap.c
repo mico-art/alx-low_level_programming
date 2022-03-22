@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /*
- * void swap_int - a function that swaps the values of two integers
+ * swap_int - a function that swaps the values of two integers
  * @a: input 1
  * @b: input 2
  * main - check the code
