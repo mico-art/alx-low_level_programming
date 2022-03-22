@@ -1,6 +1,4 @@
-include <stdio.h>
-#include <stdlib.h>
-
+#include <stdio.h>
 /**
  * main - prints the numbers from 1 to 100
  * 3 multiples print Fizz instead of the number
@@ -10,21 +8,16 @@ include <stdio.h>
  */
 int main(void)
 {
-	int i;
-	char f[] = "Fizz";
-	char b[] = "Buzz";
-	char fb[] = "FizzBuzz";
 
-	for (i = 1; i <= 100; i++)
+	for (int i = 1; i <= 100; i++)
 {
-		if (i == 100)
-			printf("%s", b);
-		else if ((i % 3 == 0) && (i % 5 == 0))
-			printf("%s ", fb);
+
+        if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%s ", "FizzBuzz");
 		else if (i % 3 == 0)
-			printf("%s ", f);
+			printf("%s ", "Fizz");
 		else if (i % 5 == 0)
-			printf("%s ", b);
+			printf("%s ", "Buzz");
 		else
 			printf("%d ", i);
 }
