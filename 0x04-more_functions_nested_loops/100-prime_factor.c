@@ -3,7 +3,7 @@ int main()
 {
    long int n;
    n=612852475143;
-   long int div=2, ans = 0, maxFact;
+   long int div=2, maxFact;
    while(n!=0)
 {
       if(n % div !=0)
@@ -14,12 +14,12 @@ int main()
          n = n / div;
          if(n == 1)
 {
-            printf("%d is the largest prime factor !",maxFact);
-            ans = 1;
             break;
 }
 }
 }
-   return 0;
+printf("%d",maxFact);
+printf("\n");
+   return (0);
 }
 
