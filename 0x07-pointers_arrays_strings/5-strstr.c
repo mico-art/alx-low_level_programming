@@ -3,7 +3,7 @@
  */
 
 #include "main.h"
-
+#include <stdio.h>
 /**
  * _strstr - Locates a substring.
  * @haystack: The string to be searched.
@@ -16,30 +16,21 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-int index;
-
-if (*needle == 0)
-return (haystack);
-
-while (*haystack)
+	for (; *haystack != '\0'; haystack++)
 {
-index = 0;
 
-if (haystack[index] == needle[index])
-{	
-do
+		char *one = haystack;
+		char *two = needle;
+
+		while (*one == *two && *two != '\0')
 {
-if (needle[index + 1] == '\0')
-return (haystack);
-
-index++;
-
-}
-while (haystack[index] == needle[index]);
+			one++;
+			two++;
 }
 
-haystack++;
+		if (*two == '\0')
+			return (haystack);
 }
 
-return ('\0');
+	return (NULL);
 }
